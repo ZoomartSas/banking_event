@@ -23,8 +23,9 @@ public class Client {
     UUID id;
     String name;
     String surname;
-    String userName;
-    String secretWord;
+    String username;
+    //String secretWord;
+    String password;
     @OneToMany
             @JoinTable(
                     joinColumns = @JoinColumn(name = "client_id"),

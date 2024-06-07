@@ -2,7 +2,6 @@ package kg.example.bankingapplication.Service.Account.Impl;
 
 import kg.example.bankingapplication.Domein.Model.Account;
 import kg.example.bankingapplication.Events.AccountCreateEvent;
-import kg.example.bankingapplication.Repository.AccountRepository;
 import kg.example.bankingapplication.Service.Account.AccountCommandService;
 import kg.example.bankingapplication.Service.Events.EventService;
 import lombok.RequiredArgsConstructor;

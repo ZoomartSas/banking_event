@@ -4,7 +4,6 @@ import kg.example.bankingapplication.Events.AbstractEvent;
 import kg.example.bankingapplication.Repository.EventRepository;
 import kg.example.bankingapplication.Service.Events.EventService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

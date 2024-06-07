@@ -1,10 +1,7 @@
 package kg.example.bankingapplication.Domein.Model;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
@@ -35,4 +32,8 @@ public class Card {
     List<Transaction> transactions;
     @ManyToOne
     Account account;
+
+    public Card(Account account) {
+        this.account = account;
+    }
 }
