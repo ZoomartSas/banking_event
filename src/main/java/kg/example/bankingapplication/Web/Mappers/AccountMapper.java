@@ -4,6 +4,6 @@ import kg.example.bankingapplication.Domein.Model.Account;
 import kg.example.bankingapplication.Web.DTO.AccountDto;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface AccountMapper  extends Mappable<Account, AccountDto>{
 }

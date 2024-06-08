@@ -2,7 +2,6 @@ package kg.example.bankingapplication.Service.Authorization;
 
 import kg.example.bankingapplication.Domein.Exceptions.ResourceAlreadyExistsException;
 import kg.example.bankingapplication.Domein.Model.Client;
-import kg.example.bankingapplication.Service.Card.CardService;
 import kg.example.bankingapplication.Service.Client.ClientService;
 import kg.example.bankingapplication.Web.DTO.LoginRequestDto;
 import kg.example.bankingapplication.Web.DTO.LoginResponseDto;
@@ -20,7 +19,8 @@ public class AuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public void register(Client client) {
-        if (clientService.existsByUsername(client.getUsername())){
+        if (clientService
+                .existsByUsername(client.getUsername())){
             throw new ResourceAlreadyExistsException();
         }
         client.setPassword(client.getPassword());

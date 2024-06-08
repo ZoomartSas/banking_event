@@ -21,9 +21,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthorizationController {
     private final AuthorizationService authorizationService;
     private final ClientMapper clientMapper;
+
+
     @PostMapping("/req")
-    public void register(@RequestBody @Validated(OnCreate.class) final ClientDto dto
-                         ){
+    public void register(
+            @RequestBody @Validated(OnCreate.class) final ClientDto dto ){
         Client client = clientMapper.fromDto(dto);
         authorizationService.register(client);
     }
