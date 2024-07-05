@@ -6,4 +6,5 @@ import kg.example.bankingapplication.Service.QueryService;
 
 public interface ClientService extends QueryService<Client>,CommandService<Client>{
     boolean existsByUsername(String username);
+    Client getByUsername(String username);
 }

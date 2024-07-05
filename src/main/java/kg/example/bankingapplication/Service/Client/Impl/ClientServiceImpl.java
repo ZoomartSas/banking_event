@@ -1,5 +1,6 @@
 package kg.example.bankingapplication.Service.Client.Impl;
 
+import kg.example.bankingapplication.Domein.Exceptions.ResourceNotFoundException;
 import kg.example.bankingapplication.Domein.Model.Client;
 import kg.example.bankingapplication.Service.Client.ClientCommandService;
 import kg.example.bankingapplication.Service.Client.ClientQueryService;
@@ -28,5 +29,10 @@ import java.util.UUID;
     public boolean existsByUsername(String username) {
 
         return queryService.existsByUsername(username);
+    }
+
+    @Override
+    public Client getByUsername(String username) {
+        return queryService.getByUsername(username);
     }
 }

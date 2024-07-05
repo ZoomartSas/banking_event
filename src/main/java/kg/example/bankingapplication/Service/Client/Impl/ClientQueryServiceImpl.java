@@ -22,6 +22,12 @@ private final ClientRepository clientRepository;
     }
 
     @Override
+    public Client getByUsername(String username) {
+        return clientRepository.findByUsername(username)
+                .orElseThrow(ResourceNotFoundException::new);
+    }
+
+    @Override
     public boolean existsByUsername(String username) {
         return clientRepository
                 .existsByUsername(username);
