@@ -12,6 +12,7 @@ public interface CardService
         extends QueryService<Card>, CommandService<Card> {
     void createByClientId (UUID clientId);
     boolean existByNumberAndDate(Long number, LocalDate date);
+    Card getByNumberAndDateAndCvv(Long number,LocalDate date,short cvv);
 
 
 }

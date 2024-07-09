@@ -40,4 +40,9 @@ public class CardServiceImpl implements CardService {
 
         return queryService.existByNumberAndDate(number,date);
     }
+
+    @Override
+    public Card getByNumberAndDateAndCvv(Long number, LocalDate date, short cvv) {
+        return queryService.getByNumberAndDateAndCvv(number,date,cvv);
+    }
 }

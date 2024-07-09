@@ -9,4 +9,5 @@ import java.time.LocalDate;
 public interface CardQueryService
         extends QueryService<Card> {
     boolean existByNumberAndDate(Long number, LocalDate date);
+    Card getByNumberAndDateAndCvv(Long number,LocalDate date,short cvv);
 }
