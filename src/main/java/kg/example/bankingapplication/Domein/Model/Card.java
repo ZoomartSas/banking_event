@@ -21,7 +21,7 @@ public class Card {
     @GeneratedValue
     @JdbcTypeCode(SqlTypes.VARCHAR)
     UUID id;
-    Long number;
+    String number;
     LocalDate date;
     short cvv;
     @OneToMany

@@ -36,7 +36,7 @@ public class CardDto {
             @Null(
                     message = "Card it should be null"
             )
-    Long number;
+    String number;
     @NotNull(
             message = "Date shouldn't be null",
             groups = OnCreate.class

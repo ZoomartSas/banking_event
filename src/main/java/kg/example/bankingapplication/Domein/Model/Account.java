@@ -25,6 +25,6 @@ public class Account {
     @GeneratedValue
     @JdbcTypeCode(SqlTypes.VARCHAR)
     UUID id;
-    Long number;
+    String number;
     BigDecimal balance;
 }

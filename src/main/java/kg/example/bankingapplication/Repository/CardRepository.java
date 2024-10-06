@@ -9,6 +9,6 @@ import java.util.Optional;
 import java.util.UUID;
 @Repository
 public interface CardRepository extends JpaRepository<Card, UUID> {
-    boolean existsByNumberAndDate(Long number, LocalDate date);
-    Optional<Card> findByNumberAndDateAndCvv(Long number,LocalDate date,short cvv);
+    boolean existsByNumberAndDate(String number, LocalDate date);
+    Optional<Card> findByNumberAndDateAndCvv(String number, LocalDate date, short cvv);
 }

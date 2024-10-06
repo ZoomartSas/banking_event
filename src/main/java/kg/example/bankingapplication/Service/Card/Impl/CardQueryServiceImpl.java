@@ -22,11 +22,11 @@ public class CardQueryServiceImpl implements CardQueryService {
     }
 
     @Override
-    public boolean existByNumberAndDate(Long number, LocalDate date) {
+    public boolean existByNumberAndDate(String number, LocalDate date) {
         return cardRepository.existsByNumberAndDate(number,date);
     }
     @Override
-    public Card getByNumberAndDateAndCvv(Long number, LocalDate date, short cvv) {
+    public Card getByNumberAndDateAndCvv(String number, LocalDate date, short cvv) {
         return cardRepository.findByNumberAndDateAndCvv(number,date,cvv)
                 .orElseThrow(ResourceNotFoundException ::new);
     }

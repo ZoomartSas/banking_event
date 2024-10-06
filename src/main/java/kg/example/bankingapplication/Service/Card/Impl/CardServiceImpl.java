@@ -36,13 +36,13 @@ public class CardServiceImpl implements CardService {
     }
 
     @Override
-    public boolean existByNumberAndDate(Long number, LocalDate date) {
+    public boolean existByNumberAndDate(String number, LocalDate date) {
 
         return queryService.existByNumberAndDate(number,date);
     }
 
     @Override
-    public Card getByNumberAndDateAndCvv(Long number, LocalDate date, short cvv) {
+    public Card getByNumberAndDateAndCvv(String number, LocalDate date, short cvv) {
         return queryService.getByNumberAndDateAndCvv(number,date,cvv);
     }
 }
